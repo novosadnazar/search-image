@@ -17,7 +17,6 @@ class App extends Component {
     tags: "",
   };
 
-  // Викликається автоматично, коли змінюється query або page
   componentDidUpdate(_, prevState) {
     if (
       prevState.query !== this.state.query ||
@@ -50,7 +49,7 @@ class App extends Component {
     });
   };
 
-  // Логіка для модального вікна
+
   toggleModal = (largeImageURL = "", tags = "") => {
     this.setState(({ showModal }) => ({
       showModal: !showModal,
