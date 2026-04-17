@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import style from "./Searchbar.module.css"
 export class Searchbar extends Component {
-  handleSubmit = (i) => {
-    i.preventDefault();
-    const query = i.target.elements.searchQuery.value.trim();
+  handleSubmit = (evt) => {
+    evt.preventDefault();
+    const query = evt.target.elements.searchQuery.value.trim();
     this.props.onSubmit(query);
   };
 
